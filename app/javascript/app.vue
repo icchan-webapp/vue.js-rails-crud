@@ -9,6 +9,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import EmployeeIndexPage from 'EmployeeIndexPage.vue'
 import EmployeeDetailPage from 'EmployeeDetailPage.vue'
 import EmployeeNewPage from 'EmployeeNewPage.vue'
+import EmployeeEditPage from 'EmployeeEditPage.vue'
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -20,7 +21,10 @@ const router = createRouter({
       component: EmployeeDetailPage },
     { path: '/employees/new',
       name: 'EmployeeNewPage',
-      component: EmployeeNewPage }
+      component: EmployeeNewPage },
+    { path: '/employees/:id(\\d+)/edit',
+      name: 'EmployeeEditPane',
+      component: EmployeeEditPage }
   ]
 })
 
